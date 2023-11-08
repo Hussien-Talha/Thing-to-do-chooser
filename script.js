@@ -416,7 +416,8 @@ var techActivities = [
 
     const modeSwitch = document.getElementById('modeSwitch');
     const body = document.body;
+    const dark = document.getElementById('checkboxInput')
 
-    modeSwitch.addEventListener('click', () => {
+    dark.addEventListener('click', () => {
       body.classList.toggle('dark-mode');
     });
