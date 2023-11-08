@@ -413,3 +413,10 @@ var techActivities = [
       var randomActivity = getRandomActivity();
       activityDiv.textContent = randomActivity;
     });
+
+    const modeSwitch = document.getElementById('modeSwitch');
+    const body = document.body;
+
+    modeSwitch.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+    });
