@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Tech Activity</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    #activity {
+      font-size: 24px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tech Activity Generator</h1>
+  <button id="generateButton">Click me for a tech activity!</button>
+  <div id="activity"></div>
+
+  <script>
+    var techActivities = [
+      "Watch tech documentaries.",
+      "Learn to code with online tutorials.",
+      "Try building a website or app.",
+      "Explore virtual reality experiences.",
+      "Dive into a video game marathon.",
+      "Read tech news and blogs.",
+      "Start a tech-related YouTube channel.",
+      "Experiment with digital art or design.",
+      "Learn about AI and machine learning.",
+      "Upgrade your computer or gadgets.",
+      "Listen to tech podcasts.",
+      "Follow tech influencers on social media.",
+      "Research emerging tech trends.",
+      "Join online tech communities.",
+      "Take online courses on tech topics.",
+      "Organize your digital files and photos.",
+      "Experiment with home automation.",
+      "Create a tech-related project.",
+      "Try 3D printing if you have access.",
+      "Explore coding competitions.",
+      "Set up a home server.",
+      "Build a custom PC.",
+      "Study cybersecurity.",
+      "Dive into cryptocurrency.",
+      "Explore the world of drones.",
+      "Experiment with robotics.",
+      "Learn about blockchain technology.",
+      "Follow NASA's latest missions.",
+      "Explore tech-related books.",
+      "Tinker with Raspberry Pi projects.",
+      "Dive into the world of digital marketing.",
+      "Upgrade your software and apps.",
+      "Create a tech-themed blog.",
+      "Follow tech stock market trends.",
+      "Investigate tech history.",
+      "Experiment with virtual machines.",
+      "Try your hand at ethical hacking.",
+      "Learn about quantum computing.",
+      "Explore augmented reality.",
+      "Check out tech expos and events.",
+      "Experiment with smart home devices.",
+      "Set up a media center at home.",
+      "Study UX and UI design principles.",
+      "Learn about data science.",
+      "Experiment with Internet of Things (IoT) devices.",
+      "Get into podcasting about tech.",
+      "Dive into open-source software.",
+      "Explore e-sports and gaming tournaments.",
+      "Study cloud computing.",
+      "Tinker with retro tech restoration."
+    ];
+
+    function getRandomActivity() {
+      var randomIndex = Math.floor(Math.random() * techActivities.length);
+      return techActivities[randomIndex];
+    }
+
+    var generateButton = document.getElementById("generateButton");
+    var activityDiv = document.getElementById("activity");
+
+    generateButton.addEventListener("click", function() {
+      var randomActivity = getRandomActivity();
+      activityDiv.textContent = randomActivity;
+    });
+  </script>
+</body>
+</html>
