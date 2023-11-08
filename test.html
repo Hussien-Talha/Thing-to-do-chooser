@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Tech Activity</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    #activity {
+      font-size: 24px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tech Activity Generator</h1>
+  <button id="generateButton">Click me for a tech activity!</button>
+  <div id="activity"></div>
+
+  <script>
+    function getRandomActivity() {
+      fetch("https://www.boredapi.com/api/activity?type=education")
+        .then(response => response.json())
+        .then(data => {
+          var activityDiv = document.getElementById("activity");
+          activityDiv.textContent = data.activity;
+        })
+        .catch(error => console.error(error));
+    }
+
+    var generateButton = document.getElementById("generateButton");
+    generateButton.addEventListener("click", getRandomActivity);
+  </script>
+</body>
+</html>
